@@ -1,0 +1,42 @@
+# Maven
+target/
+.classpath
+.factorypath
+.project
+.settings/
+*.jar
+*.war
+*.ear
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+*.log
+
+# Generated files
+*.class
+
+# Karate Reports
+karate-reports/
+
+# Environment & Secrets (Variables sensibles)
+.env
+.env.local
+*.properties.local
+
+# Runtime Logs
+logs/
+*.log.*
