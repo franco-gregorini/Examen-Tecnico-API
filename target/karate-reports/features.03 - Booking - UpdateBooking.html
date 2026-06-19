@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"44f98f16-7a0d-41f1-a136-0c47633488a3",karate_version:"1.5.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>features.03 - Booking - UpdateBooking</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2026-06-19 12:09:26 a. m.</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:4]"><span>[1:4]</span> <span>Actualización de una reserva HP status 200 flujo correcto</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:34]"><span>[2:34]</span> <span>Validación de la Actualización de una reserva UNHP status 400 solicitud mal formada</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:58]"><span>[3:58]</span> <span>Validación de la Actualización de una reserva UNHP status 403 Token Invalido o vencido</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:81]"><span>[4:81]</span> <span>Validación de la Actualización de una reserva UNHP status 404 URL Incorrecta</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:105]"><span>[5:105]</span> <span>Validación de la Actualización de una reserva UNHP status 405 ID Incorrecto en la URL</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">features/03 - Booking - UpdateBooking.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Escenarios de Pruebas API Booking - UpdateBooking</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:4]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Api_Test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:4]</span>
+                <span class="scenario-name">Actualización de una reserva HP status 200 flujo correcto</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>631</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com/auth&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { username: &#39;admin&#39;, password: &#39;password123&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">309</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">00:09:23.594 request:
+1 &gt; POST https://restful-booker.herokuapp.com/auth
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 45
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+00:09:23.902 response time in milliseconds: 308
+1 &lt; 200
+1 &lt; Content-Length: 27
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 19 Jun 2026 05:09:24 GMT
+1 &lt; Etag: W/&quot;1b-wgkn6VYH5lSYSoZXEZRNb0s0vlY&quot;
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845764&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845764&quot;
+1 &lt; Server: Heroku
+1 &lt; Via: 1.1 heroku-router
+1 &lt; X-Powered-By: Express
+{&quot;token&quot;:&quot;617fcddb37a6105&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Actualizar con el token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bookingId = 3</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def jsonBody = { firstname: &#39;John&#39;, lastname: &#39;Doe&#39;, totalprice: 402, depositpaid: true, bookingdates: { checkin: &#39;2026-01-01&#39;, checkout: &#39;2026-01-04&#39; }, additionalneeds: &#39;Breakfast&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;booking&#39;, bookingId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Cookie = &#39;token=&#39; + token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request jsonBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">310</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.22">00:09:23.907 request:
+2 &gt; PUT https://restful-booker.herokuapp.com/booking/3
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Cookie: token=617fcddb37a6105
+2 &gt; Content-Length: 167
+2 &gt; Host: restful-booker.herokuapp.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;totalprice&quot;:402,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}
+
+00:09:24.215 response time in milliseconds: 307
+2 &lt; 200
+2 &lt; Content-Length: 167
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 19 Jun 2026 05:09:24 GMT
+2 &lt; Etag: W/&quot;a7-vtWubffT4W+50vUt02+kAcN9STI&quot;
+2 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+2 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845764&quot;}],&quot;max_age&quot;:3600}
+2 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845764&quot;
+2 &lt; Server: Heroku
+2 &lt; Via: 1.1 heroku-router
+2 &lt; X-Powered-By: Express
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;totalprice&quot;:402,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.firstname == jsonBody.firstname</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.lastname == jsonBody.lastname</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.totalprice == jsonBody.totalprice</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.depositpaid == jsonBody.depositpaid</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.bookingdates.checkin == jsonBody.bookingdates.checkin</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.bookingdates.checkout == jsonBody.bookingdates.checkout</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.additionalneeds == jsonBody.additionalneeds</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.31">00:09:24.226 [print] Response: {
+  &quot;firstname&quot;: &quot;John&quot;,
+  &quot;lastname&quot;: &quot;Doe&quot;,
+  &quot;totalprice&quot;: 402,
+  &quot;depositpaid&quot;: true,
+  &quot;bookingdates&quot;: {
+    &quot;checkin&quot;: &quot;2026-01-01&quot;,
+    &quot;checkout&quot;: &quot;2026-01-04&quot;
+  },
+  &quot;additionalneeds&quot;: &quot;Breakfast&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:34]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Api_Test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:34]</span>
+                <span class="scenario-name">Validación de la Actualización de una reserva UNHP status 400 solicitud mal formada</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>638</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com/auth&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { username: &#39;admin&#39;, password: &#39;password123&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">307</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.38">00:09:24.232 request:
+1 &gt; POST https://restful-booker.herokuapp.com/auth
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 45
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+00:09:24.538 response time in milliseconds: 305
+1 &lt; 200
+1 &lt; Content-Length: 27
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 19 Jun 2026 05:09:24 GMT
+1 &lt; Etag: W/&quot;1b-nJiKwweFUKS8f58Nox8gcNRV7T0&quot;
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845764&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=GSGuXWY1Zb%2FSoJuZ49LtfOlNOk5m1CtYqpp4q5fwbkI%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845764&quot;
+1 &lt; Server: Heroku
+1 &lt; Via: 1.1 heroku-router
+1 &lt; X-Powered-By: Express
+{&quot;token&quot;:&quot;d277d414a1d588f&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Actualizar con el token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bookingId = 3</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def jsonBody = { firstname: &#39;John&#39;, lastname: &#39;Doe&#39;, depositpaid: true, bookingdates: { checkin: &#39;2026-01-01&#39;, checkout: &#39;2026-01-04&#39; }, additionalneeds: &#39;Dinner&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;booking&#39;, bookingId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Cookie = &#39;token=&#39; + token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request jsonBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">328</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.51">00:09:24.541 request:
+2 &gt; PUT https://restful-booker.herokuapp.com/booking/3
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Cookie: token=d277d414a1d588f
+2 &gt; Content-Length: 147
+2 &gt; Host: restful-booker.herokuapp.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Dinner&quot;}
+
+00:09:24.868 response time in milliseconds: 326
+2 &lt; 400
+2 &lt; Content-Length: 11
+2 &lt; Content-Type: text/plain; charset=utf-8
+2 &lt; Date: Fri, 19 Jun 2026 05:09:25 GMT
+2 &lt; Etag: W/&quot;b-EFiDB1U+dmqzx9Mo2UjcZ1SJPO8&quot;
+2 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+2 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845765&quot;}],&quot;max_age&quot;:3600}
+2 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845765&quot;
+2 &lt; Server: Heroku
+2 &lt; Via: 1.1 heroku-router
+2 &lt; X-Powered-By: Express
+Bad Request
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.54">00:09:24.869 [print] Response: Bad Request 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:58]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Api_Test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:58]</span>
+                <span class="scenario-name">Validación de la Actualización de una reserva UNHP status 403 Token Invalido o vencido</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>608</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com/auth&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { username: &#39;admin&#39;, password: &#39;password123&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">308</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.62">00:09:24.874 request:
+1 &gt; POST https://restful-booker.herokuapp.com/auth
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 45
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+00:09:25.181 response time in milliseconds: 306
+1 &lt; 200
+1 &lt; Content-Length: 27
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 19 Jun 2026 05:09:25 GMT
+1 &lt; Etag: W/&quot;1b-9wQPewPDRJkFo3Pms4FbFLVEP9s&quot;
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845765&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845765&quot;
+1 &lt; Server: Heroku
+1 &lt; Via: 1.1 heroku-router
+1 &lt; X-Powered-By: Express
+{&quot;token&quot;:&quot;88b6233c2608a46&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Actualizar con el token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bookingId = 2</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def jsonBody = { firstname: &#39;John&#39;, lastname: &#39;Doe&#39;, totalprice: 402, depositpaid: true, bookingdates: { checkin: &#39;2026-01-01&#39;, checkout: &#39;2026-01-04&#39; }, additionalneeds: &#39;Dinner&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref passed">69</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.70">
+      <div class="step-ref passed">70</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;booking&#39;, bookingId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.71">
+      <div class="step-ref passed">71</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.72">
+      <div class="step-ref passed">72</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref passed">73</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Cookie = &#39;token=12345&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request jsonBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">298</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.75">00:09:25.184 request:
+2 &gt; PUT https://restful-booker.herokuapp.com/booking/2
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Cookie: token=12345
+2 &gt; Content-Length: 164
+2 &gt; Host: restful-booker.herokuapp.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;totalprice&quot;:402,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Dinner&quot;}
+
+00:09:25.481 response time in milliseconds: 296
+2 &lt; 403
+2 &lt; Content-Length: 9
+2 &lt; Content-Type: text/plain; charset=utf-8
+2 &lt; Date: Fri, 19 Jun 2026 05:09:25 GMT
+2 &lt; Etag: W/&quot;9-PatfYBLj4Um1qTm5zrukoLhNyPU&quot;
+2 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+2 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845765&quot;}],&quot;max_age&quot;:3600}
+2 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=Pi3xziNmWVBGjJqyVLaNlX9Yf4EFvMlu%2BBKNq%2BL5xVg%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845765&quot;
+2 &lt; Server: Heroku
+2 &lt; Via: 1.1 heroku-router
+2 &lt; X-Powered-By: Express
+Forbidden
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 403</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.78">00:09:25.482 [print] Response: Forbidden 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:81]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Api_Test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:81]</span>
+                <span class="scenario-name">Validación de la Actualización de una reserva UNHP status 404 URL Incorrecta</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>608</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com/auth&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { username: &#39;admin&#39;, password: &#39;password123&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.85">
+      <div class="step-ref passed">85</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">298</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.85">00:09:25.487 request:
+1 &gt; POST https://restful-booker.herokuapp.com/auth
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 45
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+00:09:25.784 response time in milliseconds: 296
+1 &lt; 200
+1 &lt; Content-Length: 27
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 19 Jun 2026 05:09:26 GMT
+1 &lt; Etag: W/&quot;1b-wAh4U5MeWRoOjPDqr9u+pJNhcU0&quot;
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845766&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845766&quot;
+1 &lt; Server: Heroku
+1 &lt; Via: 1.1 heroku-router
+1 &lt; X-Powered-By: Express
+{&quot;token&quot;:&quot;11db7ae0d9bad04&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Actualizar con el token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bookingId = 3</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def jsonBody = { firstname: &#39;John&#39;, lastname: &#39;Doe&#39;, totalprice: 402, depositpaid: true, bookingdates: { checkin: &#39;2026-01-01&#39;, checkout: &#39;2026-01-04&#39; }, additionalneeds: &#39;Dinner&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.92">
+      <div class="step-ref passed">92</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;book&#39;, bookingId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Cookie = &#39;token=&#39; + token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.97">
+      <div class="step-ref passed">97</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request jsonBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.98">
+      <div class="step-ref passed">98</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">307</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.98">00:09:25.788 request:
+2 &gt; PUT https://restful-booker.herokuapp.com/book/3
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Cookie: token=11db7ae0d9bad04
+2 &gt; Content-Length: 164
+2 &gt; Host: restful-booker.herokuapp.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;totalprice&quot;:402,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Dinner&quot;}
+
+00:09:26.094 response time in milliseconds: 305
+2 &lt; 404
+2 &lt; Content-Length: 9
+2 &lt; Content-Type: text/plain; charset=utf-8
+2 &lt; Date: Fri, 19 Jun 2026 05:09:26 GMT
+2 &lt; Etag: W/&quot;9-0gXL1ngzMqISxa6S1zx3F4wtLyg&quot;
+2 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+2 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845766&quot;}],&quot;max_age&quot;:3600}
+2 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845766&quot;
+2 &lt; Server: Heroku
+2 &lt; Via: 1.1 heroku-router
+2 &lt; X-Powered-By: Express
+Not Found
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.99">
+      <div class="step-ref passed">99</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.100">
+      <div class="step-ref passed">100</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.101">
+      <div class="step-ref passed">101</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.101">00:09:26.094 [print] Response: Not Found 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:105]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Api_Test</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:105]</span>
+                <span class="scenario-name">Validación de la Actualización de una reserva UNHP status 405 ID Incorrecto en la URL</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>596</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Obtener token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com/auth&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.108">
+      <div class="step-ref passed">108</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { username: &#39;admin&#39;, password: &#39;password123&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.109">
+      <div class="step-ref passed">109</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">297</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.109">00:09:26.100 request:
+1 &gt; POST https://restful-booker.herokuapp.com/auth
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 45
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+00:09:26.396 response time in milliseconds: 295
+1 &lt; 200
+1 &lt; Content-Length: 27
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 19 Jun 2026 05:09:26 GMT
+1 &lt; Etag: W/&quot;1b-m3rGBzfZSyBYUWCulzLO5gATbss&quot;
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845766&quot;}],&quot;max_age&quot;:3600}
+1 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=XTsANOdpbWJzZ%2B6n33pXyEyb%2BOHJvQDXou0%2BtBzjwps%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845766&quot;
+1 &lt; Server: Heroku
+1 &lt; Via: 1.1 heroku-router
+1 &lt; X-Powered-By: Express
+{&quot;token&quot;:&quot;309917b143d1e3f&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.110">
+      <div class="step-ref passed">110</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.111">
+      <div class="step-ref passed">111</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Actualizar con el token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.114">
+      <div class="step-ref passed">114</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def bookingId = &#39;a&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.115">
+      <div class="step-ref passed">115</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def jsonBody = { firstname: &#39;John&#39;, lastname: &#39;Doe&#39;, totalprice: 402, depositpaid: true, bookingdates: { checkin: &#39;2026-01-01&#39;, checkout: &#39;2026-01-04&#39; }, additionalneeds: &#39;Dinner&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.116">
+      <div class="step-ref passed">116</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://restful-booker.herokuapp.com&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.117">
+      <div class="step-ref passed">117</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>path &#39;booking&#39;, bookingId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.118">
+      <div class="step-ref passed">118</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.119">
+      <div class="step-ref passed">119</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Accept = &quot;application/json&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.120">
+      <div class="step-ref passed">120</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Cookie = &#39;token=&#39; + token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.121">
+      <div class="step-ref passed">121</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request jsonBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.122">
+      <div class="step-ref passed">122</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">297</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.122">00:09:26.399 request:
+2 &gt; PUT https://restful-booker.herokuapp.com/booking/a
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Accept: application/json
+2 &gt; Cookie: token=309917b143d1e3f
+2 &gt; Content-Length: 164
+2 &gt; Host: restful-booker.herokuapp.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.11)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;totalprice&quot;:402,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2026-01-01&quot;,&quot;checkout&quot;:&quot;2026-01-04&quot;},&quot;additionalneeds&quot;:&quot;Dinner&quot;}
+
+00:09:26.695 response time in milliseconds: 295
+2 &lt; 405
+2 &lt; Content-Length: 18
+2 &lt; Content-Type: text/plain; charset=utf-8
+2 &lt; Date: Fri, 19 Jun 2026 05:09:27 GMT
+2 &lt; Etag: W/&quot;12-UGJMK66P4abaBlq0vKHJaCKuGCA&quot;
+2 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;response_headers&quot;:[&quot;Via&quot;],&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.01,&quot;failure_fraction&quot;:0.1}
+2 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?s=290DXA03GLrefgrBIx3Kv2Iqf8R92TWSO8%2FM0eJWPQA%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1781845767&quot;}],&quot;max_age&quot;:3600}
+2 &lt; Reporting-Endpoints: heroku-nel=&quot;https://nel.heroku.com/reports?s=290DXA03GLrefgrBIx3Kv2Iqf8R92TWSO8%2FM0eJWPQA%3D&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;ts=1781845767&quot;
+2 &lt; Server: Heroku
+2 &lt; Via: 1.1 heroku-router
+2 &lt; X-Powered-By: Express
+Method Not Allowed
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.123">
+      <div class="step-ref passed">123</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 405</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.124">
+      <div class="step-ref passed">124</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.125">
+      <div class="step-ref passed">125</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.125">00:09:26.696 [print] Response: Method Not Allowed 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

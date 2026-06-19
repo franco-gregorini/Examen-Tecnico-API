@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/01 - Auth \u2013 CreateToken[1:4]","start":1781845760541,"end":1781845761403,"title":"features\/01 - Auth \u2013 CreateToken[1:4] 00:09:20.541-00:09:21.403 Creacion de un token de autenticación HP status 200 flujo correcto"},{"id":2,"group":1,"content":"features\/01 - Auth \u2013 CreateToken[2:15]","start":1781845761416,"end":1781845761729,"title":"features\/01 - Auth \u2013 CreateToken[2:15] 00:09:21.416-00:09:21.729 Validacion de un token de autenticación HP status 200 con credenciales incorrectas"},{"id":3,"group":1,"content":"features\/01 - Auth \u2013 CreateToken[3:25]","start":1781845761737,"end":1781845762038,"title":"features\/01 - Auth \u2013 CreateToken[3:25] 00:09:21.737-00:09:22.038 Validacion de un token de autenticación UNHP status 404 URL Incorrecto"},{"id":4,"group":1,"content":"features\/02 - Booking - GetBooking[1:4]","start":1781845762523,"end":1781845762846,"title":"features\/02 - Booking - GetBooking[1:4] 00:09:22.523-00:09:22.846 Obtener informacion de una reserva HP status 200 flujo correcto"},{"id":5,"group":1,"content":"features\/02 - Booking - GetBooking[2:21]","start":1781845762852,"end":1781845763184,"title":"features\/02 - Booking - GetBooking[2:21] 00:09:22.852-00:09:23.184 Validacion de informacion de una reserva UNHP status 404 Url Incorrecta"},{"id":6,"group":1,"content":"features\/02 - Booking - GetBooking[3:33]","start":1781845763189,"end":1781845763501,"title":"features\/02 - Booking - GetBooking[3:33] 00:09:23.189-00:09:23.501 Validacion de informacion de una reserva UNHP status 418 - I'm a Teapot"},{"id":7,"group":1,"content":"features\/03 - Booking - UpdateBooking[1:4]","start":1781845763593,"end":1781845764225,"title":"features\/03 - Booking - UpdateBooking[1:4] 00:09:23.593-00:09:24.225 Actualización de una reserva HP status 200 flujo correcto"},{"id":8,"group":1,"content":"features\/03 - Booking - UpdateBooking[2:34]","start":1781845764231,"end":1781845764868,"title":"features\/03 - Booking - UpdateBooking[2:34] 00:09:24.231-00:09:24.868 Validación de la Actualización de una reserva UNHP status 400 solicitud mal formada"},{"id":9,"group":1,"content":"features\/03 - Booking - UpdateBooking[3:58]","start":1781845764873,"end":1781845765481,"title":"features\/03 - Booking - UpdateBooking[3:58] 00:09:24.873-00:09:25.481 Validación de la Actualización de una reserva UNHP status 403 Token Invalido o vencido"},{"id":10,"group":1,"content":"features\/03 - Booking - UpdateBooking[4:81]","start":1781845765486,"end":1781845766094,"title":"features\/03 - Booking - UpdateBooking[4:81] 00:09:25.486-00:09:26.094 Validación de la Actualización de una reserva UNHP status 404 URL Incorrecta"},{"id":11,"group":1,"content":"features\/03 - Booking - UpdateBooking[5:105]","start":1781845766099,"end":1781845766695,"title":"features\/03 - Booking - UpdateBooking[5:105] 00:09:26.099-00:09:26.695 Validación de la Actualización de una reserva UNHP status 405 ID Incorrecto en la URL"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

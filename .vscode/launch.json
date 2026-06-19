@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug Karate JUnit Runner",
+      "request": "launch",
+      "mainClass": "org.junit.platform.console.ConsoleLauncher",
+      "projectName": "karate-api-automation",
+      "args": "--select-class=config.Runner"
+    }
+  ]
+}
